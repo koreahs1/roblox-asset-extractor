@@ -1,2 +1,34 @@
-# roblox-asset-extractor
-Roblox asset extractor. Using assetdelivery.roblox.com API.
+# Roblox Asset Extractor
+
+Roblox의 에셋 ID를 입력하여 원본 이미지 에셋을 쉽게 다운로드할 수 있는 파이썬 데스크톱(GUI) 애플리케이션입니다.
+
+## 주요 기능
+* **로블록스 로그인 연동**: 내장된 웹 브라우저 창을 통해 로블록스에 로그인하면, 원본 이미지 다운로드에 필요한 `.ROBLOSECURITY` 쿠키를 자동으로 추출하여 적용합니다.
+* **비동기 다운로드**: 다운로드 중에도 프로그램이 멈추지 않으며 진행률을 실시간으로 확인할 수 있습니다.
+* **미리보기 및 저장**: 이미지를 다운로드하기 전 미리보기를 제공하며, 원하는 경로에 간편하게 저장할 수 있습니다.
+
+## 요구 사항 (Requirements)
+* Python 3.7+
+* `PyQt5`
+* `PyQtWebEngine`
+* `requests`
+
+## 설치 및 실행 방법
+
+1. 필요한 패키지를 설치합니다:
+```bash
+pip install -r requirements.txt
+```
+*(요구 사항이 추가로 필요할 경우 `pip install PyQt5 PyQtWebEngine requests`로 설치하세요.)*
+
+2. 앱을 실행합니다:
+```bash
+python main.py
+```
+*(윈도우 환경에서 콘솔 창을 숨기고 싶다면 `python main.pyw`로 실행할 수 있습니다.)*
+
+## 사용 방법
+1. 앱 실행 후 먼저 **'로블록스 로그인'** 버튼을 클릭하여 본인의 로블록스 계정으로 로그인합니다.
+2. 메인 창으로 돌아오면 다운로드할 **에셋 ID**를 입력합니다.
+3. **'가져오기'** 버튼을 클릭합니다.
+4. 이미지가 로드되면 **'저장하기'**를 눌러 원하는 경로에 저장합니다.
